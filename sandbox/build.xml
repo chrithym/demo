@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project default="Test">
+   <target name="Test">  
+      <jar destfile="start.jar" basedir="bin" update="yes">
+         <manifest>
+          <attribute name="Main-Class" value="layouts.FlowLayoutTest"/>  
+         </manifest>
+      </jar>
+   </target>
+</project>
