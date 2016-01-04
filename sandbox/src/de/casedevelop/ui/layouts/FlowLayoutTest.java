@@ -1,4 +1,4 @@
-package layouts;
+package de.casedevelop.ui.layouts;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -13,12 +13,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Christian Preisner <preisner@white-paper-media.de>
- */
 public class FlowLayoutTest extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1073885272333752797L;
 	/*
 	 * Einige Buttons
 	 */
@@ -57,7 +57,7 @@ public class FlowLayoutTest extends JFrame implements ActionListener {
 
 		getContentPane().add(mainPanel);
 
-		URL url = ClassLoader.getSystemResource("layouts/test.png");
+		URL url = ClassLoader.getSystemResource("de/casedevelop/ui/layouts/test.png");
 		Toolkit kit = Toolkit.getDefaultToolkit();
 		Image img = kit.createImage(url);
 		setIconImage(img);

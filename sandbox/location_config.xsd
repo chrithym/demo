@@ -1,0 +1,55 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="location_configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="version"/>
+        <xs:element name="unusedBegin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="value"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="solution">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="x"/>
+              <xs:element type="xs:integer" name="y"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="areas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="area" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element name="table" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:integer" name="tableId"/>
+                          <xs:element type="xs:integer" name="seats"/>
+                          <xs:element name="position">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:integer" name="x"/>
+                                <xs:element type="xs:integer" name="y"/>
+                                <xs:element type="xs:integer" name="width"/>
+                                <xs:element type="xs:integer" name="height"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
